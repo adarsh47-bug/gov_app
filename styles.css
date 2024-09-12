@@ -1,0 +1,261 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('bg-img.jpg');
+  /* Add your background image path here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: normal;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+  font-weight: 100;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.main-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sub-btn {
+  width: 60%;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-btn:hover {
+  background-color: #007bb5;
+  transform: translateY(-3px);
+  scale: 105%;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.animate {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-btn {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .sub-btn {
+    width: 60%;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.2rem !important;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-btn {
+    font-size: 14px;
+  }
+
+  .sub-btn {
+    width: 60%;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: .9rem !important;
+  }
+
+  .card {
+    padding: 10px;
+    margin: 10px auto;
+  }
+}
+
+/* Header and Navigation styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(223, 223, 223, 0.8);
+  /* Semi-transparent background */
+  color: rgb(0, 0, 0);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+.line-div {
+  background: #000;
+  width: 2px;
+  height: 80px;
+  margin: 0 15px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.header-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: transparent;
+}
+
+.header-btn:hover {
+  background-color: #000;
+  color: white;
+  transform: translateY(-3px);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-btn,
+.close-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-btn svg,
+.close-menu-btn svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 990px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(223, 223, 223, 0.9);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .mobile-menu-btn,
+  .close-menu-btn {
+    display: block;
+  }
+
+  .nav-menu.opCmob {
+    display: flex;
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 50px;
+  }
+
+  .line-div {
+    height: 50px;
+  }
+
+  .header-btn {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NMC Sky Sign Department</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="logo.png" alt="NMC Logo" class="logo">
+      <div class="line-div"></div>
+      <h1 style="width: 50%;">Skysign License Department, Nagpur Municipal Corporation</h1>
+    </div>
+    <nav class="nav-container">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><button class="header-btn" onclick="goToPage('index.html')">Home</button></li>
+        <li><button class="header-btn" onclick="goToPage('about.html')">Application</button></li>
+        <li><button class="header-btn" onclick="goToPage('downloads.html')">Downloads</button></li>
+        <li><button class="header-btn" onclick="goToPage('login.html')">Login</button></li>
+        <li><button class="header-btn" onclick="goToPage('contact.html')">Contact Us</button></li>
+        <li><button class="close-menu-btn" id="close-menu-btn">
+            Close
+          </button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Choose the type of site</h2>
+      <div class="button-container">
+        <button id="privateBtn" class="main-btn">Private Sites</button>
+        <button id="tenderBtn" class="main-btn">NMC Tender Sites</button>
+      </div>
+
+      <div id="privateOptions" class="options-container hidden">
+        <button class="sub-btn" onclick="goToPage('hoardings_private.html')">Hoardings</button>
+        <button class="sub-btn" onclick="goToPage('metro_kiosk.html')">Metro Kiosk</button>
+        <button class="sub-btn" onclick="goToPage('metro_gantry.html')">Metro Gantry</button>
+        <button class="sub-btn" onclick="goToPage('shop_board.html')">Shop Board</button>
+      </div>
+
+      <div id="tenderOptions" class="options-container hidden">
+        <button class="sub-btn" onclick="goToPage('hoardings_tender.html')">Hoardings</button>
+        <button class="sub-btn" onclick="goToPage('kiosk.html')">Kiosk</button>
+        <button class="sub-btn" onclick="goToPage('gantry.html')">Gantry</button>
+        <button class="sub-btn" onclick="goToPage('banner_stand.html')">Banner Stand</button>
+      </div>
+    </div>
+  </main>
+
+  <footer style="position: absolute; bottom: 0; width: 100vw; color: rgba(255, 255, 255, 0.073); text-align: center;">
+    <p>© <span id="date"></span> NMC Sky Sign Department. All rights reserved.</p>
+    <p>Designed by Adarsh Vijay Kadam</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
