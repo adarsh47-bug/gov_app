@@ -48,7 +48,9 @@ h1 {
 }
 
 .main-btn:hover {
-  background-color: #45a049;
+  background-color: #ffffff;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
   transform: translateY(-3px);
 }
 
