@@ -1,3 +1,4 @@
+'use strict';
 const privateBtn = document.getElementById('privateBtn');
 const tenderBtn = document.getElementById('tenderBtn');
 
