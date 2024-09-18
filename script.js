@@ -1,9 +1,16 @@
-document.getElementById('privateBtn').addEventListener('click', function () {
+const privateBtn = document.getElementById('privateBtn');
+const tenderBtn = document.getElementById('tenderBtn');
+
+privateBtn.addEventListener('click', function () {
   displayOptions('privateOptions');
+  privateBtn.classList.add('main-btn-active');
+  tenderBtn.classList.remove('main-btn-active');
 });
 
-document.getElementById('tenderBtn').addEventListener('click', function () {
+tenderBtn.addEventListener('click', function () {
   displayOptions('tenderOptions');
+  tenderBtn.classList.add('main-btn-active');
+  privateBtn.classList.remove('main-btn-active');
 });
 
 function displayOptions(optionId) {
